@@ -9,6 +9,7 @@ Implémentons à présent la même fonctionnalité avec des objets, des proprié
     - les propriétés pour leur nom complet, leur poids et leur taille
     - une méthode qui calcule le BMI
         (enregistre le BMI dans l'objet et, en plus, le retourne à partir de la méthode)
+
 2. Affiche dans la console qui a le BMI le plus élevé avec le nom complet et le BMI.
     N'oublie pas qu'il pourrait y avoir un ex æquo.
 
@@ -16,3 +17,33 @@ Rappel: BMI = poids / taille^2 = poids / (taille * taille). (poids en kg and tai
 
 BONNE CHANCE 😀
 */
+
+const mark ={
+    firstName:"Mark",
+    weight:80,
+    height:180,
+    bmi:function (){
+        this.bmiValue = this.weight / (this.height * this.height);
+        return this.bmiValue;
+    }
+}
+
+const john ={
+    firstName:"John",
+    weight:60,
+    height:160,
+    bmi:function (){
+        this.bmiValue = this.weight / (this.height * this.height);
+        return this.bmiValue;
+    }
+}
+
+const markBmi = mark.bmi();
+const johnBmi = john.bmi();
+
+if (johnBmi > markBmi) {
+    console.log(`${john.firstName} has a higher BMI than ${mark.firstName}.`);
+} else {
+    console.log(`${mark.firstName} has a higher BMI than ${john.firstName}`);
+}
+

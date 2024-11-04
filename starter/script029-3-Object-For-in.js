@@ -7,31 +7,38 @@
 /*
 for(const prop in objet) {
   console.log(prop + " : " + objet[prop]);
-}   
+}
 */
 
 /*
-EXERCICE 1 : 
+EXERCICE 1 :
 Parcours l'objet mesFruits pour afficher, pour chacun des fruits, "Le fruit … coûte … €"
 */
+
 const mesFruits = {
   "Pomme": 1.3,
   "Poire": 0.5,
   "Ananas": 3
 };
 
+for (const fruitKey in mesFruits) {
+  console.log(`Le nom du fruit est ${fruitKey} et son prix est à ${mesFruits[fruitKey]}`);
+}
 // Écris ton code ici
 
 /*
 EXERCICE 2 :
 Parcours l'objet fruit pour afficher chacune de ses propriétés avec, pour chacune, sa valeur
 */
-const fruit = {
-  "Nom": "Pomme",
-  "Prix": 0.3,
-  "Couleur": "Verte",
-  "Variété": "Golden"
-};
+
+const fruit ={
+  nom:"Fraise",
+  coût:5,
+}
+
+for (const fruitKey in fruit) {
+  console.log(`Le nom du fruit est ${fruitKey} et son prix est fixé à ${fruit[fruitKey]}`);
+}
 
 // Écris ton code ici
 
@@ -41,5 +48,8 @@ EXERCICE 3 :
 Parcours le mot "Bonjour" pour afficher séparément chacune de ses lettres
 */
 const mot = "Bonjour";
+for (let i = 0; i < mot.length ; i++) {
+  console.log(mot[i]);
+}
 
 // Écris ton code ici
